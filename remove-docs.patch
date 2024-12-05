@@ -1,0 +1,17 @@
+diff --git a/Makefile b/Makefile
+index e9a2c60..a0c88f6 100644
+--- a/Makefile
++++ b/Makefile
+@@ -5,9 +5,6 @@ include $(TOPDIR)/src/include/version.mk
+ include $(TOPDIR)/src/include/rules.mk
+ include $(TOPDIR)/src/include/defaults.mk
+ include $(TOPDIR)/src/include/coverity.mk
+ include $(TOPDIR)/src/include/scan-build.mk
+
+ SUBDIRS := src
+-ifeq ($(ENABLE_DOCS), 1)
+-SUBDIRS += docs
+-endif
+
+ all : | efivar.spec src/include/version.mk prep
+ all clean install prep :

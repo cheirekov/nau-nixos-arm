@@ -24,7 +24,7 @@
           imports = [ "${modulesPath}/installer/sd-card/sd-image-armv7l-multiplatform.nix" ];
 
           boot.supportedFilesystems.zfs = lib.mkForce false;
-#          boot.loader.systemd-boot.enable = false;  # Disable systemd-boot to avoid EFI dependencies
+          boot.loader.systemd-boot.enable = false;
 
           users.mutableUsers = false;
           users.users.root = {
