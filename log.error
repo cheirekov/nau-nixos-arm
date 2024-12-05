@@ -1,0 +1,120 @@
+Running phase: unpackPhase
+@nix { "action": "setPhase", "phase": "unpackPhase" }
+unpacking source archive /nix/store/50fn04hk1951qzrcn7yygp7sil52kixs-source
+source root is source
+Running phase: patchPhase
+@nix { "action": "setPhase", "phase": "patchPhase" }
+Running phase: updateAutotoolsGnuConfigScriptsPhase
+@nix { "action": "setPhase", "phase": "updateAutotoolsGnuConfigScriptsPhase" }
+Running phase: updateAutotoolsGnuConfigScriptsPhase
+@nix { "action": "setPhase", "phase": "updateAutotoolsGnuConfigScriptsPhase" }
+Running phase: configurePhase
+@nix { "action": "setPhase", "phase": "configurePhase" }
+no configure script, doing nothing
+Running phase: buildPhase
+@nix { "action": "setPhase", "phase": "buildPhase" }
+build flags: SHELL=/nix/store/0irlcqx2n3qm6b1pc9rsd2i8qpvcccaj-bash-5.2p37/bin/bash prefix=\$\(out\) libdir=\$\(out\)/lib bindir=\$\(bin\)/bin mandir=\$\(man\)/share/man includedir=\$\(dev\)/include PCDIR=\$\(dev\)/lib/pkgconfig
+make[1]: Entering directory '/build/source/src'
+gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants   -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -DEFIVAR_BUILD_ENVIRONMENT -march=native -c -o makeguids.o makeguids.c
+cp util.c util-makeguids.c
+gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants   -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -DEFIVAR_BUILD_ENVIRONMENT -march=native -c -o util-makeguids.o util-makeguids.c
+gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants   -L.   -Wl,--build-id -Wl,--no-allow-shlib-undefined -Wl,-z,now -Wl,-z,muldefs -Wl,--no-undefined-version    -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -DEFIVAR_BUILD_ENVIRONMENT -march=native -o makeguids makeguids.o util-makeguids.o -ldl 
+./makeguids guids.txt guid-symbols.c include/efivar/efivar-guids.h
+./makeguids guids.txt guid-symbols.c include/efivar/efivar-guids.h
+make[2]: Entering directory '/build/source/src'
+make[2]: Leaving directory '/build/source/src'
+make[1]: Nothing to be done for 'prep'.
+make[1]: Leaving directory '/build/source/src'
+make[1]: Entering directory '/build/source/docs'
+make[1]: Nothing to be done for 'prep'.
+make[1]: Leaving directory '/build/source/docs'
+make[1]: Entering directory '/build/source/src'
+make[2]: Entering directory '/build/source/src'
+make[2]: Nothing to be done for 'deps'.
+make[2]: Leaving directory '/build/source/src'
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o crc32.o crc32.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o dp.o dp.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o dp-acpi.o dp-acpi.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o dp-hw.o dp-hw.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o dp-media.o dp-media.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o dp-message.o dp-message.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o efivarfs.o efivarfs.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o error.o error.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o export.o export.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o guid.o guid.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o guid-symbols.o guid-symbols.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o lib.o lib.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o vars.o vars.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o time.o time.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -L.   -Wl,--build-id -Wl,--no-allow-shlib-undefined -Wl,--no-undefined-version -Wl,-z,now -Wl,-z,muldefs -Wl,-z,relro -Wl,--fatal-warnings     -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/  -shared -Wl,-soname,libefivar.so.1 -Wl,--version-script=libefivar.map  -o libefivar.so crc32.o dp.o dp-acpi.o dp-hw.o dp-media.o dp-message.o efivarfs.o error.o export.o guid.o guid-symbols.o lib.o vars.o time.o -ldl 
+ln -vfs libefivar.so libefivar.so.1
+'libefivar.so.1' -> 'libefivar.so'
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o creator.o creator.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o disk.o disk.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o gpt.o gpt.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o loadopt.o loadopt.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o path-helpers.o path-helpers.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o linux.o linux.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o linux-acpi-root.o linux-acpi-root.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o linux-acpi.o linux-acpi.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o linux-ata.o linux-ata.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o linux-emmc.o linux-emmc.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o linux-i2o.o linux-i2o.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o linux-md.o linux-md.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o linux-nvme.o linux-nvme.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o linux-pci-root.o linux-pci-root.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o linux-pci.o linux-pci.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o linux-pmem.o linux-pmem.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o linux-sas.o linux-sas.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o linux-sata.o linux-sata.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o linux-scsi.o linux-scsi.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o linux-soc-root.o linux-soc-root.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o linux-virtblk.o linux-virtblk.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o linux-virtual-root.o linux-virtual-root.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -L.   -Wl,--build-id -Wl,--no-allow-shlib-undefined -Wl,--no-undefined-version -Wl,-z,now -Wl,-z,muldefs -Wl,-z,relro -Wl,--fatal-warnings     -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/  -shared -Wl,-soname,libefiboot.so.1 -Wl,--version-script=libefiboot.map  -o libefiboot.so crc32.o creator.o disk.o gpt.o loadopt.o path-helpers.o linux.o linux-acpi-root.o linux-acpi.o linux-ata.o linux-emmc.o linux-i2o.o linux-md.o linux-nvme.o linux-pci-root.o linux-pci.o linux-pmem.o linux-sas.o linux-sata.o linux-scsi.o linux-soc-root.o linux-virtblk.o linux-virtual-root.o -lefivar 
+ln -vfs libefiboot.so libefiboot.so.1
+'libefiboot.so.1' -> 'libefiboot.so'
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o sec.o sec.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o secdb.o secdb.c
+armv7l-unknown-linux-gnueabihf-gcc -Og  -g3 -Wall -Wextra  -Werror  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/build/source/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/build/source/src/include/ -c -o esl-iter.o esl-iter.c
+[01m[Kesl-iter.c:[m[K In function '[01m[Kesl_list_iter_next_with_size_correction[m[K':
+[01m[Kesl-iter.c:338:80:[m[K [01;31m[Kerror: [m[Kformat '[01m[K%lx[m[K' expects argument of type '[01m[Klong unsigned int[m[K', but argument 4 has type '[01m[Koff_t[m[K' {aka '[01m[Klong long int[m[K'} [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Werror=format=]8;;[m[K]
+  338 |                                 warnx("correcting ESL size from %d to %jd at [01;31m[K%lx[m[K",
+      |                                                                              [01;31m[K~~^[m[K
+      |                                                                                [01;31m[K|[m[K
+      |                                                                                [01;31m[Klong unsigned int[m[K
+      |                                                                              [32m[K%llx[m[K
+  339 |                                       iter->esl->signature_list_size,
+  340 |                                       (intmax_t)(iter->len - iter->offset), [32m[Kiter->offset[m[K);
+      |                                                                             [32m[K~~~~~~~~~~~~[m[K
+      |                                                                                 [32m[K|[m[K
+      |                                                                                 [32m[Koff_t {aka long long int}[m[K
+[01m[Kesl-iter.c:363:82:[m[K [01;31m[Kerror: [m[Kformat '[01m[K%lx[m[K' expects argument of type '[01m[Klong unsigned int[m[K', but argument 4 has type '[01m[Koff_t[m[K' {aka '[01m[Klong long int[m[K'} [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Werror=format=]8;;[m[K]
+  363 |                                 warnx("correcting ESL size from %d to %jd at 0x[01;31m[K%lx[m[K",
+      |                                                                                [01;31m[K~~^[m[K
+      |                                                                                  [01;31m[K|[m[K
+      |                                                                                  [01;31m[Klong unsigned int[m[K
+      |                                                                                [32m[K%llx[m[K
+  364 |                                       iter->esl->signature_list_size,
+  365 |                                       (intmax_t)(iter->len - iter->offset), [32m[Kiter->offset[m[K);
+      |                                                                             [32m[K~~~~~~~~~~~~[m[K
+      |                                                                                 [32m[K|[m[K
+      |                                                                                 [32m[Koff_t {aka long long int}[m[K
+[01m[Kesl-iter.c:396:29:[m[K [01;31m[Kerror: [m[Kcast to pointer from integer of different size [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wint-to-pointer-cast-Werror=int-to-pointer-cast]8;;[m[K]
+  396 |                 iter->esl = [01;31m[K([m[Kefi_signature_list_t *)((intptr_t)iter->buf
+      |                             [01;31m[K^[m[K
+[01m[Kesl-iter.c:414:74:[m[K [01;31m[Kerror: [m[Kformat '[01m[K%lx[m[K' expects argument of type '[01m[Klong unsigned int[m[K', but argument 4 has type '[01m[Koff_t[m[K' {aka '[01m[Klong long int[m[K'} [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Werror=format=]8;;[m[K]
+  414 |                         warnx("correcting ESL size from %d to %jd at 0x[01;31m[K%lx[m[K",
+      |                                                                        [01;31m[K~~^[m[K
+      |                                                                          [01;31m[K|[m[K
+      |                                                                          [01;31m[Klong unsigned int[m[K
+      |                                                                        [32m[K%llx[m[K
+  415 |                               iter->esl->signature_list_size,
+  416 |                               (intmax_t)(iter->len - iter->offset), [32m[Kiter->offset[m[K);
+      |                                                                     [32m[K~~~~~~~~~~~~[m[K
+      |                                                                         [32m[K|[m[K
+      |                                                                         [32m[Koff_t {aka long long int}[m[K
+cc1: all warnings being treated as errors
+make[1]: *** [/build/source/src/include/rules.mk:53: esl-iter.o] Error 1
+make[1]: Leaving directory '/build/source/src'
+make: *** [Makefile:17: all] Error 2
