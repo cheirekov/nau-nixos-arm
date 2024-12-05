@@ -13,7 +13,7 @@ stdenv.mkDerivation rec {
     hash = "sha256-s/1k5a3n33iLmSpKQT5u08xoj8ypjf2Vzln88OBrqf0=";
   };
 
-  patches = [ ./remove-docs.patch ];
+  #patches = [ ./remove-docs.patch ];
 
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [ popt ];
@@ -22,6 +22,7 @@ stdenv.mkDerivation rec {
   preConfigure = ''
     # Remove '-Werror' from the compiler flags
     sed -i 's/-Werror//g' src/include/defaults.mk
+    rm -rf docs
   '';
 
   NIX_CFLAGS_COMPILE = [
@@ -30,14 +31,16 @@ stdenv.mkDerivation rec {
     "-Wno-error=int-to-pointer-cast"
   ];
 
-  makeFlags = [
-    "prefix=$(out)"
-    "libdir=$(out)/lib"
-    "bindir=$(bin)/bin"
-    "includedir=$(dev)/include"
-    "PCDIR=$(dev)/lib/pkgconfig"
-  ];
+makeFlags = [
+  "ENABLE_DOCS=0"
+  "prefix=$(out)"
+  "libdir=$(out)/lib"
+  "bindir=$(bin)/bin"
+  "includedir=$(dev)/include"
+  "PCDIR=$(dev)/lib/pkgconfig"
+];
 
+buildFlags = [ "ENABLE_DOCS=0" ];
   doCheck = false;
   dontUseParallelBuilding = true;
 
