@@ -4,7 +4,7 @@ stdenv.mkDerivation rec {
   pname = "efivar";
   version = "39";
 
-  outputs = [ "bin" "out" "dev" "man" ];
+  outputs = [ "bin" "out" "dev" ];
 
   src = fetchFromGitHub {
     owner = "rhboot";
