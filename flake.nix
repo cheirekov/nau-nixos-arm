@@ -16,12 +16,15 @@
       system = "x86_64-linux";
       modules = [
         ({ pkgs, lib, modulesPath, ... }: {
+
           nixpkgs = {
             crossSystem = lib.systems.examples.armv7l-hf-multiplatform;
             overlays = self.overlays;
           };
 
-          imports = [ "${modulesPath}/installer/sd-card/sd-image-armv7l-multiplatform.nix" ];
+          imports = [ "${modulesPath}/installer/sd-card/sd-image-armv7l-multiplatform.nix" 
+          ./hardware-configuration.nix
+          ];
 
           boot.supportedFilesystems.zfs = lib.mkForce false;
           boot.loader.systemd-boot.enable = false;
@@ -30,11 +33,17 @@
           users.users.root = {
             password = "root";
           };
-          users.users.user = {
-            password = "user";
+          users.users.nemo = {
+            password = "astalavista";
             isNormalUser = true;
             extraGroups = [ "wheel" ];
           };
+            sdImage.imageBaseName = "nixos-orange-pi-zero";
+
+            nixpkgs.config.allowUnfree = true;
+            sdImage.postBuildCommands = with pkgs; ''
+               dd if=${ubootOrangePiZero}/u-boot-sunxi-with-spl.bin of=$img conv=fsync,notrunc bs=1024 seek=8
+            '';
 
           system.stateVersion = "24.11";
         })
